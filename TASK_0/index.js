@@ -92,8 +92,10 @@ function upDateName(){
 
 function getFruitByName(){
     let name = prompt('Enter fruit name you wish to find:  ');
-    let index = fruits.map((fruit) => fruit.name).indexOf(name);
-    console.log(`${index}-Name: ${fruits[index].name} | Category: ${fruits[index].category}\n`);
+    let fruit = fruits.reduce((prev,curr) => {
+        return curr.name == name? curr : prev
+    },{});
+    console.log(`Name: ${fruit.name} | Category: ${fruit.category}\n`);
 }
 
 function displayAllFruits(){
