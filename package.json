@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "'Js repo for exercises'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blanco237/JavaScript4Everyone.git"
+  },
+  "author": "Blanco237",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Blanco237/JavaScript4Everyone/issues"
+  },
+  "homepage": "https://github.com/Blanco237/JavaScript4Everyone#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
