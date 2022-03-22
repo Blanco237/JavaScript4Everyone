@@ -78,8 +78,8 @@ function deleteFruit() {
 function updateFruit() {
     let name = document.querySelector('input[value="Name"]');
     let category = document.querySelector('input[value="Category"]');
-    let id = document.getElementById('upFruitId').value;
-    if (id > fruits.length - 1 || id < 0) {
+    let id = parseInt(document.getElementById('upFruitId').value);
+    if (id > (fruits.length - 1) || id < 0 || isNaN(id)) {
         alert('Please Enter a valid id');
         return;
     }
