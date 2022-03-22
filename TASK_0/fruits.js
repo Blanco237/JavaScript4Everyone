@@ -53,41 +53,41 @@ let fruits = [
 
 window.onload = loadList;
 
-function addFruit(){
+function addFruit() {
     let name = document.getElementById('fruitName').value;
     let category = document.getElementById('fruitCategory').value;
 
-    fruits.push({name,category});
+    fruits.push({ name, category });
     alert('Fruit Added!');
 
     loadList();
 }
 
-function deleteFruit(){
+function deleteFruit() {
     let id = document.querySelector('#delFruitId').value;
-    if(id>fruits.length-1 || id<0){
+    if (id > (fruits.length - 1) || id < 0 ) {
         alert('Please Enter a valid id');
         return;
     }
-    fruits.splice(id,1);
+    fruits.splice(id, 1);
     alert('Fruit Deleted Successfully\n');
     loadList();
 }
 
-function updateFruit(){
+function updateFruit() {
     let name = document.querySelector('input[value="Name"]');
     let category = document.querySelector('input[value="Category"]');
     let id = document.getElementById('upFruitId').value;
-    if(id>fruits.length-1 || id<0){
+    if (id > fruits.length - 1 || id < 0) {
         alert('Please Enter a valid id');
         return;
     }
     let data = document.getElementById('upData').value;
 
-    if(name.checked){
+    if (name.checked) {
         fruits[id].name = data;
     }
-    else if(category.checked){
+    else if (category.checked) {
         fruits[id].category = data;
     }
     alert('Fruit Updated');
@@ -95,43 +95,43 @@ function updateFruit(){
     loadList();
 }
 
-function loadList(){
+function loadList() {
     let list = document.querySelector('.fruits');
     let data = "";
-    fruits.forEach((fruit,index) => {
+    fruits.forEach((fruit, index) => {
         data += `<p class='item'>${index} -- ${fruit.name}  -- ${fruit.category}</p>`
     })
 
     list.innerHTML = data;
-    
+
 }
 
 
 
-function addFruits(){
+function addFruits() {
     let name = prompt('Enter fruit name:  ');
     let category = prompt('Enter food Category:  ');
 
-    fruits.push({name,category});
+    fruits.push({ name, category });
     console.log('Fruit Added!!\n');
 }
 
 
-function deleteFruits(){
+function deleteFruits() {
     displayAllFruits();
     let selectedIndex = parseInt(prompt('Enter fruit number to delete'));
-    if(selectedIndex>fruits.length || selectedIndex<0){
+    if (selectedIndex > fruits.length || selectedIndex < 0) {
         console.log('Please Enter a valid index');
         return;
     }
-    fruits.splice(selectedIndex,1);
+    fruits.splice(selectedIndex, 1);
     console.log('Fruit Deleted Successfully\n');
 }
 
-function upDateCategory(){
+function upDateCategory() {
     displayAllFruits();
     let selectedIndex = parseInt(prompt('Enter fruit number to update Category: '));
-    if(selectedIndex>fruits.length || selectedIndex<0){
+    if (selectedIndex > fruits.length || selectedIndex < 0) {
         console.log('Please Enter a valid index');
         return;
     }
@@ -139,10 +139,10 @@ function upDateCategory(){
     fruits[selectedIndex].category = category;
 }
 
-function upDateName(){
+function upDateName() {
     displayAllFruits();
     let selectedIndex = parseInt(prompt('Enter fruit number to update Name:  '));
-    if(selectedIndex>fruits.length || selectedIndex<0){
+    if (selectedIndex > fruits.length || selectedIndex < 0) {
         console.log('Please Enter a valid index');
         return;
     }
@@ -150,31 +150,31 @@ function upDateName(){
     fruits[selectedIndex].name = name;
 }
 
-function getFruitByName(){
+function getFruitByName() {
     let name = prompt('Enter fruit name you wish to find:  ');
-    let fruit = fruits.reduce((prev,curr) => {
-        return curr.name == name? curr : prev
-    },{});
+    let fruit = fruits.reduce((prev, curr) => {
+        return curr.name == name ? curr : prev
+    }, {});
     console.log(`Name: ${fruit.name} | Category: ${fruit.category}\n`);
 }
 
-function displayAllFruits(){
-    if(fruits.length==0){
+function displayAllFruits() {
+    if (fruits.length == 0) {
         console.log("NO FRUITS RECORDED\n");
         return;
     }
     console.log("\n")
-    fruits.forEach((fruit,index) => {
+    fruits.forEach((fruit, index) => {
         console.log(`${index}-Name: ${fruit.name} | Category: ${fruit.category}`)
     });
     console.log("\n")
 }
 
-function displayFruitsByCategory(){
+function displayFruitsByCategory() {
     let category = prompt('Enter Category you wish to display:  ');
     console.log("\n")
-    fruits.forEach((fruit,index) => {
-        if(fruit.category != category){
+    fruits.forEach((fruit, index) => {
+        if (fruit.category != category) {
             return;
         }
         console.log(`${index}-Name: ${fruit.name} | Category: ${fruit.category}`)
