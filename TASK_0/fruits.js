@@ -64,8 +64,8 @@ function addFruit() {
 }
 
 function deleteFruit() {
-    let id = document.querySelector('#delFruitId').value;
-    if (id > (fruits.length - 1) || id < 0 ) {
+    let id = parseInt(document.querySelector('#delFruitId').value);
+    if (id > (fruits.length - 1) || id < 0) {
         alert('Please Enter a valid id');
         return;
     }
