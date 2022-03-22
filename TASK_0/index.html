@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" >
+    <title>TASK_0</title>
+</head>
+<body>
+    <div class="fruitContainer">
+        <div class="commands">
+            <div class="add form">
+                <h4>Add Fruit</h4>
+                <input type="text" name="fruitName" id="fruitName" placeholder="Enter Fruit Name"/>
+                <input type="text" name="fruitCategory" id="fruitCategory" placeholder="Enter Fruit Category"/>
+                <button onclick="addFruit()">Add</button>
+            </div>
+            <div class="delete form">
+                <h4>Delete Fruit</h4>
+                <input type="number" name="id" id="delFruitId" placeholder="Enter fruit Id"/>
+                <button onclick="deleteFruit()">Delete</button>
+            </div>
+            <div class="update form">
+                <h4>Update Fruit</h4>
+                <input type="number" name="id" id="upFruitId" placeholder="Enter fruit Id" />
+                <span><input type="radio" name="updateOption" value="Name"/> Name</span>
+                <span><input type="radio" name="updateOption" value="Category"/>Category</span>
+                <input type="text" placeholder="Enter new data" id="upData"/>
+                <button onclick="updateFruit()">Update</button>
+            </div>
+        </div>
+        <div class="list">
+            <h4>All Fruits</h4>
+            <div class="fruits">
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="./fruits.js"></script>
+</body>
+</html>

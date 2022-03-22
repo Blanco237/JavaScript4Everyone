@@ -1,0 +1,29 @@
+.fruitContainer{
+    display: flex;
+    gap: 1rem ;
+    border: 1px solid red;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.form{
+    margin-bottom: 10px;
+    border: 2px solid grey;
+    border-radius: 7px;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.form>h4{
+    margin: 0;
+}
+
+.item{
+    border-bottom: 1px solid blue;
+}
+
+@media screen and (max-width: 450px) {
+    .fruitContainer{
+        flex-direction: column;
+    }
+}
