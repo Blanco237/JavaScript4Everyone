@@ -65,7 +65,8 @@ function addFruit() {
 
 function deleteFruit() {
     let id = parseInt(document.querySelector('#delFruitId').value);
-    if (id > (fruits.length - 1) || id < 0) {
+    console.log(id);
+    if (id > (fruits.length - 1) || id < 0 || isNaN(id)) {
         alert('Please Enter a valid id');
         return;
     }
